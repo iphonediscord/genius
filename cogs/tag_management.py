@@ -30,7 +30,7 @@ class Tag_management(commands.Cog):
 
 	@commands.command()
 	@commands.guild_only()
-	async def create(self, ctx, name, content):
+	async def create(self, ctx, name, *, content):
 		# Checks if user has permission to run command
 		permission = await self.functions.require_manage_tag_role(ctx, ctx.message.author)
 		if not permission:
