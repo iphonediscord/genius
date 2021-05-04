@@ -15,7 +15,7 @@ import sys
 DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN")
 MONGO_URI = os.environ.get("MONGO_URI", "mongodb://127.0.0.1")
 
-cogs = ['cogs.admin']
+cogs = ['cogs.admin','cogs.tag_management','cogs.tag_use']
 
 class Genius(commands.Bot):
 
