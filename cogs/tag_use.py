@@ -11,6 +11,8 @@ class Tag_use(commands.Cog):
 	@commands.Cog.listener()
 	async def on_message(self, message):
 		ctx: commands.Context = await self.bot.get_context(message)
+		if ctx.message.author.bot:
+			return
 		if ctx.message.content.startswith("/"):
 			tag_name = ctx. message.content.replace(f"/","")
 			try:
